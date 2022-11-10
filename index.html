@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pig Dice Game</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <h1>Pig Dice Game</h1>
+  <div id="introduction">
+    <p>Welcome to the pig dice game!
+      <br>Want to play?</p><br>
+    <button id="start" class="btn btn-large btn-warning">Start Game</button>
+  </div>
+
+  <div class="container">
+    <div class="row" id="main">
+      <div class="col-4" id="row-4">
+        <h2 id="play1">Player 1</h2>
+        <p>Total Score:<br><textarea id="player1totalscore">0</textarea></p>
+        <p>Current Score:<br><textarea id="player1currentscore">0</textarea></p>
+        <p id="rolled1"><br><textarea> </textarea></p>
+        <p><span id="turnover"></span></p>
+      </div>
+
+      <div class="col-4" id="row-md-4">
+        <p> Current Die Roll:<br><textarea id="currentdieroll"></textarea></p>
+        <p id="player2currentdieroll">Current Die Roll:<br><textarea></textarea></p>
+        <p id="player1win"> Player One Wins!</p>
+        <p id="player2win"> Player Two Wins!</p><br>
+        <div id="playerbuttons">
+          <button type="button" id="rolled" class="btn btn-large btn-danger" onclick="rollDice()">ROLL DICE</button><br><br><br>
+          <button type="button" id="hold" class="btn btn-large btn-success" onclick="hold()">HOLD</button><br><br>
+          <button type="button" id="refresh" class="btn btn-large btn-info">NEW GAME</button>
+        </div>
+      </div>
+
+      <div class="col-4" id="row-md-4">
+        <h2 id="play2">Player 2</h2>
+        <p>Total Score:<br><textarea id="player2totalscore"></textarea></p>
+        <p>Current Score:<br><textarea id="player2currentscore"></textarea></p>
+        <p><output id="rolled2">Sorry! You rolled 1!</output></p>
+        <p><output id="playerwin"></output></p>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
